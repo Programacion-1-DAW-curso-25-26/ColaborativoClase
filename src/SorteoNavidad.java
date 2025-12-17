@@ -211,7 +211,7 @@ public class SorteoNavidad {
                     String nombre = Reflexiones.invocarNombre(alumno);
                     if (ganado == 400000)
                     {
-                        System.out.println(nombre + ", te tocó el gordo en el año " + anyo + "!!!!");
+                        System.out.println(nombre + ", te tocó el gordo " + gordo + " en el año " + anyo + "!!!!");
                     }
 
                     if (ganado != 0){
