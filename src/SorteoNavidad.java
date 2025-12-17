@@ -141,8 +141,15 @@ public class SorteoNavidad {
     public static void main(String[] args) {
 
 
-        List<Class<?>> alumnos = Reflexiones.clasesConMisNumeros("alumnos");
+        ArrayList<Class<?>> alumnos = Reflexiones.clasesConMisNumeros("alumnos");
         HashMap<String, Long> premiosAcumulados = new HashMap<>();
+
+
+        System.out.println("######################################");
+        System.out.println("Haciendo 10000 veces el sorteo!!!");
+        System.out.println("Atención a los premios gordos!!!");
+        System.out.println("######################################");
+
 
         for (int anyo=2025;anyo<12025;anyo++) {
 
@@ -201,7 +208,7 @@ public class SorteoNavidad {
                     ganado += extra;
 
 
-                    String nombre = alumno.getSimpleName().replace("Alumno", "");
+                    String nombre = Reflexiones.invocarNombre(alumno);
                     if (ganado == 400000)
                     {
                         System.out.println(nombre + ", te tocó el gordo en el año " + anyo + "!!!!");
@@ -221,6 +228,7 @@ public class SorteoNavidad {
         }
 
         long gasto = 10*20*10000;
+        System.out.println("-----------------------------------------------");
         System.out.println("Capital invertido por cada alumno " + gasto);
         for (Map.Entry<String,Long> alumno:premiosAcumulados.entrySet()){
             System.out.println("El alumno " + alumno.getKey() + " consiguió en premios " +  alumno.getValue() + "€ en 10000 años. Balance " + (alumno.getValue()-gasto) + "€" );

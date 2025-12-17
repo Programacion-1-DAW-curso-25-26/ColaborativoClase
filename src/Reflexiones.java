@@ -44,6 +44,16 @@ public final class Reflexiones {
         }
     }
 
+    public static String invocarNombre(Class<?> clase) {
+        try {
+            Method m = clase.getDeclaredMethod("nombre");
+            return (String) m.invoke(null);
+        } catch (Exception e) {
+            // fallback: quita el prefijo "Alumno"
+            return clase.getSimpleName().replace("Alumno", "");
+        }
+    }
+
     /* ---------- Métodos privados ---------- */
 
     private static ArrayList<Class<?>> encontrarClasesEnPaquete(String paquete) throws Exception {

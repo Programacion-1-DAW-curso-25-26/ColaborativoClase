@@ -15,4 +15,8 @@ public class AlumnoVictor {
         return  milista;
 
     }
+
+    public static String nombre() {
+        return "Víctor";   // o cualquier nombre que quieras mostrar
+    }
 }
