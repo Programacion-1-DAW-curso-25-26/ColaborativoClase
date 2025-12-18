@@ -17,6 +17,6 @@ public class AlumnoCristian {
     }
 
     public static String nombre() {
-        return "Cristian";   // o cualquier nombre que quieras mostrar
+        return "Cristian Munteanu";   // o cualquier nombre que quieras mostrar
     }
 }
