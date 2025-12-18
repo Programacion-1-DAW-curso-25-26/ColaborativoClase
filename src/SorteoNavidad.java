@@ -127,7 +127,13 @@ public class SorteoNavidad {
 
     /** 7. Centena del Gordo (100 € por número) */
     public static int centenaGordo(int gordo, List<Integer> nums) {
-        return 0;
+        int acu =0;
+        for (int n:nums){
+            if (n/100 == gordo/100){
+                acu++;
+            }
+        }
+        return acu*100;
     }
 
     /** 8. Centena del 2.º premio (100 € por número) */
