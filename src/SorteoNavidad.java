@@ -123,12 +123,27 @@ public class SorteoNavidad {
 
     /** 12. 2 últimas cifras del 2.º premio (100 € por número) */
     public static int dosCifras2o(int segundo, List<Integer> nums) {
-        return 0;
-    }
+        int premio = 0;
+        int ultimas2 = segundo % 100;
 
+        for (int n : nums) {
+            if (n != segundo && n % 100 == ultimas2) {
+                premio += 100;
+            }
+        }
+        return premio;
+    }
     /** 13. 2 últimas cifras del 3.º premio (100 € por número) */
     public static int dosCifras3o(int tercero, List<Integer> nums) {
-        return 0;
+        int premio = 0;
+        int ultimas2 = tercero % 100;
+
+        for (int n : nums) {
+            if (n != tercero && n % 100 == ultimas2) {
+                premio += 100;
+            }
+        }
+        return premio;
     }
 
     /** 14. Reintegro (20 € por número) */
