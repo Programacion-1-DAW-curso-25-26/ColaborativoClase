@@ -147,7 +147,13 @@ public class SorteoNavidad {
 
     /** 14. Reintegro (20 € por número) */
     public static int reintegro(int gordo, List<Integer> nums) {
-        return 0;
+        int finalizacion = gordo % 10;
+        int premio = 0;
+        for (int n:nums){
+            if (n%10==finalizacion)
+                premio+=20;
+        }
+        return premio;
     }
 
 
