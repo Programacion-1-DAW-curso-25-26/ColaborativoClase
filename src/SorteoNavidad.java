@@ -117,7 +117,14 @@ public class SorteoNavidad {
 
     /** 5. Aproximación anterior al 3.º premio (960 €) */
     public static int aproxAnterior3o(int tercero, List<Integer> nums) {
-        return 0;
+        int anterior = tercero - 1;
+        int premio = 0;
+        for (int n : nums) {
+            if (n == anterior) {
+                premio = 960;
+            }
+        }
+        return premio;
     }
 
     /** 6. Aproximación posterior al 3.º premio (960 €) */
