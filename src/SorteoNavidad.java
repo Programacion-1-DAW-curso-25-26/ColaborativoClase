@@ -68,7 +68,15 @@ public class SorteoNavidad {
 
     /** 1. Aproximación anterior al Gordo (2 000 €) */
     public static int aproxAnteriorGordo(int gordo, List<Integer> nums) {
-        return 0;
+        int anterior = gordo -1;
+        int premio =0;
+
+        for (int n : nums) {
+            if (n == anterior) {
+                premio += 2000;
+            }
+        }
+        return premio;
     }
 
     /** 2. Aproximación posterior al Gordo (2 000 €) */
